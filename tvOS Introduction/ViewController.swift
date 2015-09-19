@@ -31,10 +31,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: nil)
         
-        cell.textLabel?.text = "Item \(indexPath.row)"
-        cell.detailTextLabel?.text = "Subtitle \(indexPath.row)"
+        cell.textLabel?.text = "Item \(indexPath.row + 1)"
+        cell.detailTextLabel?.text = "Subtitle \(indexPath.row + 1)"
         
         return cell
+    }
+    
+    override var preferredFocusedView: UIView? {
+        return self.view.subviews[0]
+    }
+
+    func tableView(tableView: UITableView, canFocusRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if indexPath.row == 1 {
+            return false
+        }
+        
+        return true
     }
 }
 
