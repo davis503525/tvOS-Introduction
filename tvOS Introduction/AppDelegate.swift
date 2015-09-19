@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  tvOS Introduction
 //
-//  Created by Davis Allie on 17/09/2015.
-//  Copyright © 2015 Davis Allie. All rights reserved.
+//  Created by tutsplus on 17/09/2015.
+//  Copyright © 2015 tutsplus. All rights reserved.
 //
 
 import UIKit
